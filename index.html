@@ -3,34 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blue Service - Teste</title>
+        <title>Baron Gás e Água</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="src/css/bootstrap.min.css">
     </head>
-    <body>
-        <nav class="nav">
-            <a class="nav-link active btn_list_categoria" href="">Categorias</a>
-            <a class="nav-link active btn_list_produto" href="">Produtos</a>
-            <a class="nav-link active btn_list_pedido" href="">Pedidos</a>
+    <body class="bg-light">
+        <nav class="nav pt-2 pb-2 bg-primary justify-content-end mb-5">
+            <a class="nav-link text-white btn_list_categoria" href="">Pedidos</a>
+            <a class="nav-link text-white btn_list_produto" href="">Clientes</a>
+            <a class="nav-link text-white btn_list_pedido" href="">Relatórios</a>
+            <a class="nav-link text-white" href="">
+                <span class="material-icons md-18">shopping_cart_checkout</span>                           
+            </a>
         </nav>
        
-        <div class="container">
-            <div class="row">
-                <ul class="list-group categorias col-sm"></ul>
-                <ul class="list-group produtos col-sm"></ul>
+        <div class="container" ng-app="baronApp">          
+            <div class="row justify-content-center">
+                <div ng-view>
 
-                <div class="pedidos col-sm"></div>
-                
-            </div>
+                </div>
+            </div>            
         </div>
 
         <script src="src/js/jquery.min.js"></script>
         <script src="src/js/bootstrap.bundle.min.js"></script>
-        <script src="src/js/jquery_router.js"></script>
-        
-        <script src="src/js/class/categoria.js"></script>
-        <script src="src/js/class/produto.js"></script>
-        <script src="src/js/class/pedido.js"></script>
+        <script src="src/js/angular/angular.min.js"></script>
+        <script src="src/js/angular/angular-route.min.js"></script>
+        <script src="src/js/angular/mask.js"></script>
 
-        <script src="src/js/main.js"></script>
+        <script src="src/js/angular/main.js"></script>
+        <script src="src/js/angular/controllers/homeController.js"></script>
+        <script src="src/js/angular/controllers/diaController.js"></script>
+        <script src="src/js/angular/controllers/pedidoController.js"></script>
     </body>
 </html>

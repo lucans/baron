@@ -2,7 +2,7 @@
 
 class Dao
 {
-	private $dbname = 'db_blue';
+	private $dbname = 'db_baron';
 	private $host = 'localhost';
 	private $username = 'root';
 	private $pass;
@@ -20,7 +20,6 @@ class Dao
         $this->fields = $data->fields;
         $this->where = $data->where;
         $this->orderBy = $data->orderBy;
-
 		$this->data = $data->data;
 		$this->result = array();
 	}
@@ -71,7 +70,7 @@ class Dao
 	}
 
 	public function list(){
-        $sQuery = "SELECT " . $this->fields . " FROM " . $this->table . " " . $this->orderBy;
+        $sQuery = "SELECT " . $this->fields . " FROM " . $this->table . " " . $this->where . " " . $this->orderBy;
         return $this->exec($sQuery);
     }
 

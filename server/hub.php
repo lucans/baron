@@ -2,15 +2,11 @@
 
 error_reporting(E_ERROR);
 
-$postData = json_decode(json_encode($_POST));
-
-// $postData = json_decode(file_get_contents('php://input'));
+$postData = json_decode(file_get_contents('php://input'));
 
 include('./class/Dao.php');
-include('./class/Categoria.php');
 include('./class/Pedido.php');
 include('./class/PedidoProduto.php');
-include('./class/Produto.php');
 
 extract($_REQUEST);
 

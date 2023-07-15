@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ oDia.toLocaleDateString() }}, {{ aSemanaLabel[oDia.getDay()] }}</h5>
+    <p class="card-text">
+      <div class="alert alert-primary" role="alert" ng-repeat="oPedido in oPedidos">
+        {{ oPedido.id }} - {{ oPedido.data }}
+      </div>
+    </p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">Atualizados 3 minutos atrás</small>
+  </div>
+</div>

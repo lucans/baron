@@ -8,7 +8,7 @@ class Pedido {
     public function __construct($post){
         $this->id = $post->id;
         $this->result = array();
-        $this->dao = new Dao($post, $this->table);
+        $this->dao = new Dao($post->data, $this->table);
     }
 
     public function list(){
